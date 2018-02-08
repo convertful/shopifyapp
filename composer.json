@@ -1,0 +1,10 @@
+{
+    "name": "convertful/shopify-plugin",
+    "description": "This is a convertful server for Shopify plugin!",
+    "version": "0.0.0",
+    "license": "proprietary",
+	"require": {
+		"koseven/koseven": "3.3.7"
+	}
+}
+

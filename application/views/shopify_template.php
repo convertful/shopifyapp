@@ -1,0 +1,1 @@
+<b>Shopify template</b>
