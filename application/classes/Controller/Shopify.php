@@ -17,7 +17,7 @@ class Controller_Shopify extends Controller {
 			return $this->response->body('Invalid shop domain!');
 		}
 
-		$scope = 'read_products,read_script_tags,write_script_tags';
+		$scope = 'write_themes,read_themes,read_content,write_content,read_script_tags,write_script_tags,read_products,write_products,read_orders,write_orders';
 		$redirectUri = $host . '/' . Route::get('default')->uri(array(
 				'controller' => 'Shopify',
 				'action' => 'oAuthCallback'
@@ -84,10 +84,41 @@ class Controller_Shopify extends Controller {
 			'POST'
 		);
 
+		// app uninstall webhook
+		$uri = Route::get('default')->uri(array(
+			'controller' => 'Shopify',
+			'action' => 'uninstall'
+		));
+
+		$webhook_response = Integration_ShopifyHelper::performShopifyRequest(
+			$params['shop'],
+			$accessToken,
+			'webhooks',
+			array('webhook' =>
+				      array(
+					      'topic' => 'app/uninstalled',
+					      'address' => 'https://'.$_SERVER['HTTP_HOST'].'/'.$uri,
+					      //'address' => 'https://e66c3d36.ngrok.io/'.$uri,
+					      'format' => 'json'
+				      )
+			),
+			'POST'
+		);
+
 		$redirect_shop_url = "https://".$params['shop']."/admin/apps";
 
 		return $this->redirect($redirect_shop_url);
 
+	}
+
+
+	public function action_uninstall()
+	{
+		echo 'uninstall';
+		$fd = fopen("uninstall.txt", 'w') or die("не удалось создать файл");
+		$str = "uninstall";
+		fwrite($fd, $str);
+		fclose($fd);
 	}
 
 
