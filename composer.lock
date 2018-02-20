@@ -1,0 +1,72 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "c14e1e15d6ac75073fc5e03a07aa225e",
+    "packages": [
+        {
+            "name": "koseven/koseven",
+            "version": "3.3.7",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/koseven/koseven.git",
+                "reference": "b938af7814e3f4c2633e5b2731873ad94064c0af"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/koseven/koseven/zipball/b938af7814e3f4c2633e5b2731873ad94064c0af",
+                "reference": "b938af7814e3f4c2633e5b2731873ad94064c0af",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.0"
+            },
+            "conflict": {
+                "kohana/core": "3.3.*"
+            },
+            "replace": {
+                "kohana/core": "3.3.*"
+            },
+            "require-dev": {
+                "phing/phing": "^2.16",
+                "phpunit/phpunit": "^6.0"
+            },
+            "type": "library",
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD"
+            ],
+            "authors": [
+                {
+                    "name": "Kohana Team",
+                    "email": "team@kohanaframework.org",
+                    "homepage": "http://kohanaframework.org/team",
+                    "role": "developer"
+                },
+                {
+                    "name": "Koseven Team",
+                    "homepage": "https://koseven.ga/",
+                    "role": "developer"
+                }
+            ],
+            "description": "Koseven Framework - PHP-7 compatible replacement for Kohana",
+            "homepage": "https://koseven.ga/",
+            "keywords": [
+                "kohana",
+                "kohana-php7",
+                "koseven"
+            ],
+            "time": "2017-04-04T08:32:49+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": [],
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": [],
+    "platform-dev": []
+}
