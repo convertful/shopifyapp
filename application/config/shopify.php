@@ -3,8 +3,8 @@ return array
 (
     'account' => array
     (
-        'api_key' 	=> 'd7adef7f2ebb9f19b819b632c3664f8e',
-        'secret'	=> 'ecd1f7002eb113808e1ae2434e868554',
-        'host'	=> 'http://e66c3d36.ngrok.io'
+        'api_key' 	=> 'c02882519be8f1957cb28240833661a0',
+        'secret'	=> 'affb9fa4f976263d1b2fe347b534138b',
+        'host'	=> 'http://shopify.devcf.su'
     )
 );
