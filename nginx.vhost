@@ -16,8 +16,7 @@ server {
 
         include global/restrictions.conf;
 
-        access_log /srv/shopify.devcf.su/logs/access.log;
-        error_log /srv/shopify.devcf.su/logs/error.log error;
+        access_log /srv/shopify.devcf.su/application/logs/access.log;
 
         client_max_body_size 2m;
 
